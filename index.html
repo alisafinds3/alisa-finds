@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alisa Finds | Discover Better. Live Smarter.</title>
+  <meta name="description" content="Curated Amazon finds, elevated home organization, skincare essentials, and smart lifestyle upgrades by Alisa Finds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #F8F5F0;
+      --bg-sand: #EFE9DF;
+      --bg-card: #FFFFFF;
+      --text-dark: #22201E;
+      --text-muted: #6E675F;
+      --accent-gold: #8C7355;
+      --pinterest-red: #E60023;
+      --border-soft: #E4DDD3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: rgba(248, 245, 240, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-soft);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      text-decoration: none;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    .brand-logo .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      display: block;
+      line-height: 1.1;
+    }
+
+    .brand-logo .subtitle {
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    .btn-pinterest {
+      background-color: var(--text-dark);
+      color: #FFFFFF !important;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-pinterest:hover {
+      background-color: var(--pinterest-red);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 88px 24px 72px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: var(--bg-sand);
+      color: var(--accent-gold);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.12;
+      margin-bottom: 22px;
+      color: var(--text-dark);
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background-color: var(--pinterest-red);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 15px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 15px 32px;
+      border-radius: 50px;
+      border: 1px solid var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--bg-sand);
+    }
+
+    /* Curated Categories */
+    .section {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.3rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(34, 32, 30, 0.06);
+    }
+
+    .card-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--text-dark);
+      padding-bottom: 4px;
+      align-self: center;
+    }
+
+    /* Brand Story Banner */
+    .about-banner {
+      background-color: var(--bg-sand);
+      padding: 72px 24px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .about-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .about-inner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+    }
+
+    .about-inner p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--bg-cream);
+      border-top: 1px solid var(--border-soft);
+      padding: 48px 24px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .disclosure {
+      max-width: 720px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+      .nav-links a:not(.btn-pinterest) {
+        display: none;
+      }
+      .hero {
+        padding: 56px 20px 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="title">Alisa Finds</span>
+        <span class="subtitle">Discover Better. Live Smarter.</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://in.pinterest.com/alisa_finds/" target="_blank" rel="noopener" class="btn-pinterest">Follow on Pinterest</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <span class="hero-badge">Curated Daily Essentials</span>
+    <h1>Discover Better.<br>Live Smarter.</h1>
+    <p>We research and curate top-rated Amazon essentials across skincare, aesthetic home organization, kitchen upgrades, and effortless everyday style—so you can shop smarter without the endless scroll.</p>
+    <div class="hero-actions">
+      <a href="https://in.pinterest.com/alisa_finds/" target="_blank" rel="noopener" class="btn-primary">Explore Our Pinterest Boards</a>
+      <a href="#collections" class="btn-secondary">Browse Categories</a>
+    </div>
+  </section>
+
+  <!-- Curated Categories Grid -->
+  <section id="collections" class="section">
+    <div class="section-header">
+      <h2>Curated Collections</h2>
+      <p>Updated daily on our official Pinterest boards with top-trending finds</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div>
+          <div class="card-tag">Glow & Self-Care</div>
+          <h3>Beauty & Skincare</h3>
+          <p>High-performing serums, daily skincare routines, and viral vanity organizers that deliver real results.</p>
+        </div>
+        <a href="https://in.pinterest.com/alisa_finds/" target="_blank" rel="noopener">View on Pinterest &rarr;</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-tag">Elevated Spaces</div>
+          <h3>Home & Kitchen</h3>
+          <p>Minimalist storage solutions, smart kitchen gadgets, and warm neutral decor to upgrade every corner of your home.</p>
+        </div>
+        <a href="https://in.pinterest.com/alisa_finds/" target="_blank" rel="noopener">View on Pinterest &rarr;</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-tag">Wardrobe Staples</div>
+          <h3>Style & Apparel</h3>
+          <p>Effortless capsule wardrobe pieces, travel outfits, and everyday accessories curated for comfort and polish.</p>
+        </div>
+        <a href="https://in.pinterest.com/alisa_finds/" target="_blank" rel="noopener">View on Pinterest &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-banner">
+    <div class="about-inner">
+      <h2>About Alisa Finds</h2>
+      <p>Alisa Finds is a digital lifestyle curation brand dedicated to helping modern shoppers discover practical, aesthetic, and highly rated everyday products. Through our official Pinterest channel, we share visual guides and direct product recommendations sourced from trending marketplace best-sellers.</p>
+      <a href="https://in.pinterest.com/alisa_finds/" target="_blank" rel="noopener" class="btn-pinterest">@alisa_finds on Pinterest</a>
+    </div>
+  </section>
+
+  <!-- Footer & Compliance -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://in.pinterest.com/alisa_finds/" target="_blank" rel="noopener">Pinterest Profile</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <p class="disclosure">
+        <strong>Affiliate Disclosure:</strong> Alisa Finds participates in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn commissions by linking to Amazon. As an Amazon Associate, we may earn from qualifying purchases at no extra cost to you.
+      </p>
+      <p>&copy; 2026 Alisa Finds. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
